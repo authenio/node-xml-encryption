@@ -1,6 +1,6 @@
 {
   "name": "@authenio/xml-encryption",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "devDependencies": {
     "mocha": "^7.1.2",
     "should": "^11.2.1",
