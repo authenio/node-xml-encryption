@@ -1,10 +1,17 @@
 {
-  "name": "@authenio/xml-encryption",
-  "version": "2.0.2",
+  "name": "xml-encryption",
+  "version": "6.0.2",
   "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "@semantic-release/exec": "^7.0.3",
+    "conventional-changelog": "^7.2.1",
+    "conventional-changelog-conventionalcommits": "^9.3.0",
+    "husky": "^9.1.7",
     "mocha": "^7.1.2",
-    "should": "^11.2.1",
-    "sinon": "^9.0.2"
+    "semantic-release": "^25.0.2",
+    "sinon": "^9.0.2",
+    "xpath": "0.0.32"
   },
   "main": "./lib",
   "repository": "https://github.com/auth0/node-xml-encryption",
@@ -20,18 +27,16 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@xmldom/xmldom": "^0.8.6",
-    "escape-html": "^1.0.3",
-    "xpath": "0.0.32"
+    "@xmldom/xmldom": "^0.8.13",
+    "escape-html": "^1.0.3"
   },
   "files": [
     "lib",
     "package-lock.json"
   ],
   "scripts": {
-    "test": "mocha"
-  },
-  "engines": {
-    "node": ">=12"
+    "test": "mocha",
+    "prepare": "husky",
+    "update-changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md"
   }
 }
