@@ -1,19 +1,22 @@
 {
-  "name": "xml-encryption",
+  "name": "@authenio/xml-encryption",
   "version": "6.0.2",
   "devDependencies": {
     "@commitlint/cli": "^20.3.1",
     "@commitlint/config-conventional": "^20.3.1",
     "@semantic-release/exec": "^7.0.3",
+    "@types/node": "^20.19.43",
     "conventional-changelog": "^7.2.1",
     "conventional-changelog-conventionalcommits": "^9.3.0",
     "husky": "^9.1.7",
     "mocha": "^7.1.2",
     "semantic-release": "^25.0.2",
     "sinon": "^9.0.2",
+    "typescript": "^5.9.3",
     "xpath": "0.0.32"
   },
   "main": "./lib",
+  "types": "./lib/index.d.ts",
   "repository": "https://github.com/auth0/node-xml-encryption",
   "keywords": [
     "xml",
@@ -37,6 +40,7 @@
   "scripts": {
     "test": "mocha",
     "prepare": "husky",
-    "update-changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md"
+    "update-changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md",
+    "test:types": "tsc -p test/types/tsconfig.json"
   }
 }

@@ -44,3 +44,5 @@ jobs:
       - name: Run Mocha unit tests
         run: npm run test
 
+      - name: Type-check the TypeScript declarations
+        run: npm run test:types
